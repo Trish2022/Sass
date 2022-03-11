@@ -1,0 +1,20 @@
+@mixin backImage($image) {
+        background: url($image);
+    }
+
+@mixin font-source-sans($font) {
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+}
+// MEDIA QUERY BREAKPOINTS
+@mixin break($args...) {
+    @if length($args) == 1 {
+     @media (min-width: nth($args, 1)) {
+         @content;
+     } 
+   } @else {
+    @media (min-width: nth($args, 1)) and 
+           (max-width: nth($args, 2)) {
+        @content;
+    }
+  }
+}

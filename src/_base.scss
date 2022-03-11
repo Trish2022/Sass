@@ -1,0 +1,283 @@
+body {
+    color: $bodyColor; 
+    font-weight: map-get($font-weights, normal); 
+    font-family: $font;
+    line-height:2em;
+    font-size:map-get($font-sizes, body);
+    @include backImage('../images/bg.gif');
+    background-repeat: repeat-x;
+    margin: 0;
+    margin:0 auto;
+   
+    
+    main {
+    width:940px;
+    margin:0 auto;
+    padding:0 10px;
+    @include break(0, 495px) {
+        width:300px;
+        }
+    @include break(496px, 767px){
+        width: 460px;
+    }
+    @include break(768px, 959px) {
+        width:768px;
+    }
+    }
+
+figure {
+    width:400px; 
+    height:190px;
+    @include backImage('../images/logo.png');
+    background-repeat: no-repeat;
+    background-position: 0 50px;
+    float:left;
+    display:block;
+    margin:0;
+    @include break(0, 495px) {
+        background-size:contain;
+        height:100px;
+    }
+    @include break(768px, 959px) {
+        width:inherit;
+        height:140px;
+        float:none;
+        background-position:center;
+    }
+}
+
+$heading-colors: $orange, $white, $grey;
+@for $item from 1 through length($heading-colors) {
+        h#{$item} {
+          color: nth($heading-colors, $item);
+        }
+      }
+
+
+
+/* HEADER */
+header {
+    width:inherit;
+    clear: both;
+    text-align:center;
+    padding-top:40px;
+
+    img {
+        max-width:100%;
+        height:auto;
+    }
+    h1, h2, h3 {
+        line-height:0;
+    }
+    h1 {
+        font-weight: map-get($font-weights, light); 
+        font-size:map-get($font-sizes, heading1);
+        @include break(0, 495px) {
+            font-size:1.4em;
+            margin-bottom:20px;
+        }
+        @include break(496px, 767px){
+            font-size:2em;
+        }
+        @include break(768px, 959px) {
+            font-size:3em;
+        }
+
+    }
+    h2 {
+        font-weight: map-get($font-weights, bold); 
+        font-size:map-get($font-sizes, heading2);
+        margin-bottom:70px;
+        @include break(0, 495px) {
+            font-size:1.4em;
+        }
+        @include break(496px, 767px){
+            font-size:1em;
+        }
+        @include break(768px, 959px) {
+            font-size:1.5em;
+        }
+    }
+    h3 {
+        font-weight: map-get($font-weights, normal); 
+        font-size:map-get($font-sizes, heading3);
+        margin-bottom:50px;
+        color: $h3-color;
+                font-weight:400;
+                font-size:2em;
+                line-height:0;
+                margin-bottom:50px;
+                @include break(0, 495px) {
+                    color:$white;
+                    font-size:1em;
+                }
+                @include break(496px, 767px){
+                    font-size:1.5em;
+                }
+    }
+}
+
+
+/* CONTENT */
+#headline {
+    width:100%;
+    height:150px;
+    background:$headlineBg;
+    text-align:center;
+
+    
+
+   h1 {
+        color:$white;
+        font-weight: map-get($font-weights, light); 
+        font-size:map-get($font-sizes, heading2);
+        padding-top:50px;
+        @include break(0, 495px) {
+            font-size:1.5em;
+            padding-top:30px;
+        }
+        @include break(496px, 767px){
+            font-size:2em;
+            padding-top:50px;
+        }
+    }
+}
+
+#content {
+    width:940px;
+    margin:20px auto;
+    @include break(768px, 959px) {
+        width:inherit;
+    }
+
+    h3 {
+        color:$grey;
+        font-weight: map-get($font-weights, normal); 
+        font-size:map-get($font-sizes, heading3);
+        @include break(0, 495px) {
+            font-size:1.6em;
+        }
+        //  not compiling the font size etc below need to fix
+    }
+
+   #products {
+        width:460px;
+        float:left;
+        @include break(0, 495px) {
+            float:none;
+        }
+        @include break(496px, 767px){
+            width:96%;
+            margin:0 2%;
+            float:none;
+        }
+        @include break(768px, 959px) {
+            width:46%;
+            margin:0 2%;
+        }
+        img {
+            float:left;
+            margin-right:20px;
+        }
+        article {
+            margin-bottom:40px;
+        }
+        h4 {
+            line-height:1em;
+        }
+    }
+    #testimonials {
+        width:460px;
+        float:right;
+        @include break(0, 495px) {
+            float:none;
+        }
+        @include break(496px, 767px){
+            width:96%;
+            margin:0 2%;
+            float:none;
+        }
+        @include break(768px, 959px) {
+            width:46%;
+            margin:0 2%;
+        }
+    }  
+}
+article img {
+    @include break(0, 495px) {
+        display:none;
+    }
+}
+
+/* FOOTER */
+.greybar {
+    width:100%;
+    height:90px;
+    background:$whiteBg;
+    // @include clear-fix;
+    padding-top:30px;
+    @include break(0, 495px) {
+        display:none;
+    }
+}
+footer {
+    clear: both;
+    width:100%;
+    height:120px;
+    background:$footerBg;
+    text-align:center;
+    color:$white;
+    padding-top:50px;
+}
+footer p, footer img {
+    @include break(0, 495px) {
+    float:none;
+    margin:0;
+}
+}
+select {
+    @include break(0, 495px) {
+    width:95%;
+            }
+        }
+    
+
+
+.social-media {
+    margin:0 auto;
+    width:165px;
+
+    div {
+        float:left;
+        margin-right:5px;
+    }
+    a {
+        display:block;
+        width:36px;
+        height:36px;
+        text-indent:-9999px;
+    }
+
+
+    div.one {
+        @include backImage('../images/social-media.png');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+    }
+    div.two {
+        @include backImage('../images/social-media.png');
+        background-repeat: no-repeat;
+        background-position: -38px 0;
+    }
+    div.three {
+        @include backImage('../images/social-media.png');
+        background-repeat: no-repeat;
+        background-position: -76px 0;
+    }
+    div.four {
+        @include backImage('../images/social-media.png');
+        background-repeat: no-repeat;
+        background-position: -114px 0;
+    }
+}
+}

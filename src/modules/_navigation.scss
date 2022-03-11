@@ -1,0 +1,49 @@
+// Can convert this to a mixin if wanted
+/* NAVIGATION */
+// THIS IS FOR THE LARGE SCREEN LAYOUT
+nav {
+    width:540px;
+    height:190px;
+    float:left;
+    text-align:right;
+    @include break(0, 495px) {
+        margin-bottom:40px !important;
+    }
+    @include break(768px, 959px) {
+        width:inherit;
+                height:50px;
+                float:none;
+                text-align:center;
+    }
+    ul {
+        list-style-type:none;
+        margin-top:95px;
+        @include break(768px, 959px) {
+            margin-top:0;
+        }
+
+        li {
+            display:inline;
+            font-size:0.8em;
+            margin-right:10px;
+            @include break(496px, 767px){
+                font-size:0.8em;
+                margin:0 5px;
+            }
+            @include break(768px, 959px) {
+                font-size:1em;
+                margin:0 10px;
+            }
+        
+            a {
+                color:$orange;
+                text-decoration:none;
+                letter-spacing:-0.01em;
+                &:hover {
+                    color:$white;
+                }
+            }
+        }
+  
+    }
+}
