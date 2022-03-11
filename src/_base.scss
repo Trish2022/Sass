@@ -8,21 +8,20 @@ body {
     background-repeat: repeat-x;
     margin:0;
 }
-    main {
-        width:940px;
-        margin:0 auto;
-        padding:0 10px;
-        @include break(0, 495px) {
-            width:300px;
-            }
-        @include break(496px, 767px){
-            width: 460px;
+ main {
+    width:940px;
+    margin:0 auto;
+    padding:0 10px;
+    @include break(0, 495px) {
+        width:300px;
         }
-        @include break(768px, 959px) {
+     @include break(496px, 767px){
+        width: 460px;
+        }
+    @include break(768px, 959px) {
             width:768px;
         }
-        }
-        
+        }        
 figure {
     width:400px; 
     height:190px;
@@ -44,6 +43,7 @@ figure {
     }
 }
 
+/* HEADER */
 $heading-colors: $orange, $white, $grey;
 @for $item from 1 through length($heading-colors) {
         h#{$item} {
@@ -51,9 +51,6 @@ $heading-colors: $orange, $white, $grey;
         }
       }
 
-
-
-/* HEADER */
 header {
     width:inherit;
     clear: both;

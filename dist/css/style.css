@@ -60,6 +60,7 @@ figure {
   }
 }
 
+/* HEADER */
 h1 {
   color: #E65C43;
 }
@@ -72,7 +73,6 @@ h3 {
   color: #666;
 }
 
-/* HEADER */
 header {
   width: inherit;
   clear: both;
@@ -363,4 +363,66 @@ footer {
 }
 
 /* NAVIGATION */
+nav {
+  width: 540px;
+  height: 190px;
+  float: left;
+  text-align: right;
+}
+
+@media (min-width: 0) and (max-width: 495px) {
+  nav {
+    margin-bottom: 40px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 959px) {
+  nav {
+    width: inherit;
+    height: 50px;
+    float: none;
+    text-align: center;
+  }
+}
+
+nav ul {
+  list-style-type: none;
+  margin-top: 95px;
+}
+
+@media (min-width: 768px) and (max-width: 959px) {
+  nav ul {
+    margin-top: 0;
+  }
+}
+
+nav ul li {
+  display: inline;
+  font-size: 0.8em;
+  margin-right: 10px;
+}
+
+@media (min-width: 496px) and (max-width: 767px) {
+  nav ul li {
+    font-size: 0.8em;
+    margin: 0 5px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 959px) {
+  nav ul li {
+    font-size: 1em;
+    margin: 0 10px;
+  }
+}
+
+nav ul li a {
+  color: #E65C43;
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+nav ul li a:hover {
+  color: #fff;
+}
 /*# sourceMappingURL=style.css.map */
