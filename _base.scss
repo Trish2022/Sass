@@ -43,20 +43,24 @@ figure {
         float:none;
         background-position:center;
     }
-}
+    }
 nav {
     width:540px;
     height:190px;
     float:left;
     text-align:right;
     @include break(0, 495px) {
+        width:inherit;
+        height:50px;
+        float:none;
+        text-align:center;
         margin-bottom:40px !important;
     }
     @include break(768px, 959px) {
         width:inherit;
-                height:50px;
-                float:none;
-                text-align:center;
+        height:50px;
+        float:none;
+        text-align:center;
     }
     ul {
         list-style-type:none;

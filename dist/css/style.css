@@ -17,7 +17,8 @@ main {
 
 @media (min-width: 0) and (max-width: 495px) {
   main {
-    width: 300px;
+    width: 100%;
+    padding: 0 20px 0 0;
   }
 }
 
@@ -47,6 +48,7 @@ figure {
 @media (min-width: 0) and (max-width: 495px) {
   figure {
     background-size: contain;
+    background-position: top;
     height: 100px;
   }
 }
@@ -83,6 +85,20 @@ header {
 header img {
   max-width: 100%;
   height: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 0) and (max-width: 495px) {
+  header img {
+    margin-bottom: 80px;
+  }
+}
+
+@media (min-width: 496px) and (max-width: 767px) {
+  header img {
+    margin-bottom: 100px;
+  }
 }
 
 header h1, header h2, header h3 {
@@ -169,6 +185,10 @@ header h3 {
   text-align: center;
 }
 
+#headline p {
+  margin: 020px;
+}
+
 #headline h1 {
   color: #fff;
   font-weight: 100;
@@ -195,12 +215,6 @@ header h3 {
   margin: 20px auto;
 }
 
-@media (min-width: 768px) and (max-width: 959px) {
-  #content {
-    width: inherit;
-  }
-}
-
 h3 {
   color: #666;
   font-weight: 400;
@@ -220,6 +234,7 @@ h3 {
 
 @media (min-width: 0) and (max-width: 495px) {
   #products {
+    margin: 0 2%;
     float: none;
   }
 }
@@ -260,6 +275,7 @@ h3 {
 @media (min-width: 0) and (max-width: 495px) {
   #testimonials {
     float: none;
+    margin: 0 2% 0 0;
   }
 }
 
@@ -372,7 +388,11 @@ nav {
 
 @media (min-width: 0) and (max-width: 495px) {
   nav {
+    margin-top: -70px;
     margin-bottom: 40px !important;
+    text-align: left;
+    -webkit-padding-start: 0px;
+            padding-inline-start: 0px;
   }
 }
 
@@ -404,7 +424,7 @@ nav ul li {
 
 @media (min-width: 496px) and (max-width: 767px) {
   nav ul li {
-    font-size: 0.8em;
+    font-size: 2.5em;
     margin: 0 5px;
   }
 }

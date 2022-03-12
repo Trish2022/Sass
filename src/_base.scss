@@ -13,7 +13,8 @@ body {
     margin:0 auto;
     padding:0 10px;
     @include break(0, 495px) {
-        width:300px;
+        width:100%;
+        padding: 0 20px 0 0;
         }
      @include break(496px, 767px){
         width: 460px;
@@ -21,7 +22,7 @@ body {
     @include break(768px, 959px) {
             width:768px;
         }
-        }        
+ }        
 figure {
     width:400px; 
     height:190px;
@@ -33,6 +34,7 @@ figure {
     margin:0;
     @include break(0, 495px) {
         background-size:contain;
+        background-position: top ;
         height:100px;
     }
     @include break(768px, 959px) {
@@ -60,7 +62,16 @@ header {
     img {
         max-width:100%;
         height:auto;
+        max-width:100%;
+        height:auto;
+        @include break(0, 495px) {
+            margin-bottom:80px;
+        }
+        @include break(496px, 767px){
+            margin-bottom:100px;
+        }
     }
+    
     h1, h2, h3 {
         line-height:0;
     }
@@ -119,8 +130,9 @@ header {
     height:150px;
     background:$headlineBg;
     text-align:center;
-
-    
+    p {
+        margin: 020px;
+    }
 
    h1 {
         color:$white;
@@ -141,24 +153,22 @@ header {
 #content {
     width:940px;
     margin:20px auto;
-    @include break(768px, 959px) {
-        width:inherit;
-    }
 }
     h3 {
-        color:$grey;
-        font-weight: map-get($font-weights, normal); 
-        font-size:map-get($font-sizes, heading3);
-        @include break(0, 495px) {
-            font-size:1.6em;
-        }
-        //  not compiling the font size etc below need to fix
+    color:$grey;
+    font-weight: map-get($font-weights, normal); 
+    font-size:map-get($font-sizes, heading3);
+    @include break(0, 495px) {
+        font-size:1.6em;
     }
+}
 
    #products {
         width:460px;
         float:left;
         @include break(0, 495px) {
+            // width: 50%;
+            margin:0 2%;
             float:none;
         }
         @include break(496px, 767px){
@@ -186,6 +196,7 @@ header {
         float:right;
         @include break(0, 495px) {
             float:none;
+            margin:0 2% 0 0 ;
         }
         @include break(496px, 767px){
             width:96%;
