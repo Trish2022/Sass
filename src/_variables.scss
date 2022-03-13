@@ -22,7 +22,6 @@ $font-sizes: (
 
 );
 
-// NOT NEEDED?
-// $smscreen: 459px;
-// $mdscreen: 767px;
-// $lgscreen: 959px;
+//  MATH OPERATORS - EXAMPLES 
+@debug math.$pi; // 3.1415926536
+@debug math.sqrt(100); // 10
